@@ -76,6 +76,18 @@ body {
     transition: 0.3s;
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
@@ -630,6 +642,16 @@ body {
     font-size: 1.1rem;
 }
 
+.contact-method a {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: #2563eb;
+}
+
 .contact-form {
     background: #f9fafb;
     padding: 2rem;
@@ -690,6 +712,16 @@ body {
     color: #d1d5db;
 }
 
+.footer-section a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fbbf24;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -705,6 +737,30 @@ body {
 
     .nav-menu {
         display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
     }
 
     .nav-logo h2 {
